@@ -1,3 +1,47 @@
-<p>
-  carga works!
-</p>
+<div class="row">
+  <div class="col-md-4">
+    <h3>Selecciones archivos</h3>
+    <div class="well drop-zone file-over">
+        <h4>Deje caer aquí los archivos</h4>
+        <img src="assets/drop-images.png" alt="">
+    </div>
+  </div>
+
+  <div class="col-md-8">
+      <h4>Cargar archivos</h4>
+      <button type="button"
+              name="button"
+              class="btn btn-table-success"
+              (click)=cargarImagenes()>
+        Cargar a Firebase
+      </button>
+      <button type="button"
+              name="button"
+              class="btn btn-table-danger">
+        Limpiar
+      </button>
+
+      <table class="table">
+          <thead class="thead=dark">
+              <tr>
+                <td>Numbre archivo</td>
+                <td>Tamaño</td>
+                <td>Progreso</td>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>122</td>
+                  <td>2</td>
+                  <td>
+                      <div class="progress">
+                          <div class="progress-bar" role="progressbar" style="width: 25%">
+
+                          </div>
+                      </div>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
