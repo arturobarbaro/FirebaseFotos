@@ -3,6 +3,7 @@
 
     <h3>Selecciones archivos</h3>
     <div appNgDropFiles
+         [archivos]="archivos"
          [ngClass]="{'file-cover': estaSobre}"
          (mouseSobre)="pruebaSobre($event)"
          class="well drop-zone">
