@@ -23,6 +23,7 @@
       </button>
       <button type="button"
               name="button"
+              (click)="limpiarArchivos()"
               class="btn btn-table-danger">
         Limpiar
       </button>
@@ -36,12 +37,12 @@
               </tr>
           </thead>
           <tbody>
-              <tr>
-                  <td>122</td>
-                  <td>2</td>
+              <tr *ngFor="let archivo of archivos">
+                  <td>{{archivo.nombreArchivo}}</td>
+                  <td>{{archivo.archivo.size / 1024/1024 | number: .2-2}}</td>
                   <td>
                       <div class="progress">
-                          <div class="progress-bar" role="progressbar" style="width: 25%">
+                          <div class="progress-bar" role="progressbar" [ngStyle]="{'width': archivo.progreso + '%'}">
 
                           </div>
                       </div>
