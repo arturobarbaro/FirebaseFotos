@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FileItem } from 'src/app/models/file-item';
+import { FileItem } from '../../models/file-item';
 import { CargaImagenesService } from 'src/app/providers/carga-imagenes.service';
 
 @Component({
@@ -9,20 +9,20 @@ import { CargaImagenesService } from 'src/app/providers/carga-imagenes.service';
 })
 export class CargaComponent implements OnInit {
 
+  estaSobreElemento = false;
   archivos: FileItem[] = [];
-  estaSobre = false;
 
-  constructor(public _cargaImg: CargaImagenesService ) { }
+  constructor( public _cargaImagenes: CargaImagenesService ) { }
 
   ngOnInit() {
   }
 
-  cargarImagenes(){
-    this._cargaImg.cargarImagenesFirebase(this.archivos);
+  cargarImagenes() {
+    this._cargaImagenes.cargarImagenesFirebase( this.archivos );
   }
 
-  limpiarArchivos(){
-      this.archivos=[];
+  limpiarArchivos() {
+    this.archivos = [];
   }
 
 }
