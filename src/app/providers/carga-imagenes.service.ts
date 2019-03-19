@@ -12,7 +12,7 @@ export class CargaImagenesService {
 
   constructor(private db:AngularFirestore) { }
 
-  cargarImagenesFirebase(imagenes: FileItem){
+  cargarImagenesFirebase(imagenes: FileItem[]){
       console.log(imagenes)
   }
 

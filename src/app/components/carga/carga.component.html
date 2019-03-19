@@ -12,7 +12,8 @@
       <button type="button"
               name="button"
               class="btn btn-table-success"
-              (click)=cargarImagenes()>
+              (click)="cargarImagenes()"
+              [disabled]="archivos.length==0">
         Cargar a Firebase
       </button>
       <button type="button"
